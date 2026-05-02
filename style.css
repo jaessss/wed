@@ -248,6 +248,52 @@ a {
   color: var(--light-text);
 }
 
+.family-name.relation-text {
+  font-size: 11px;
+  color: var(--light-text);
+  margin-top: 0;
+}
+
+.deceased {
+  color: var(--light-text);
+}
+
+/* ===== Gallery Images ===== */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img { transform: scale(1.03); }
+
+/* ===== Deceased (고인) styles ===== */
+.chrysanthemum {
+  color: #b8a070;
+  font-size: 14px;
+}
+
+.deceased-label {
+  color: var(--light-text) !important;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+}
+
+.deceased-name {
+  font-size: 14px;
+  color: var(--light-text);
+  text-align: center;
+  margin-top: 4px;
+  font-style: italic;
+}
+
 /* ===== Date & Countdown ===== */
 .date-section {
   text-align: center;
@@ -526,6 +572,11 @@ a {
   color: var(--deep-rose);
 }
 
+.contact-btn.full {
+  width: 100%;
+  text-align: center;
+}
+
 /* ===== Account ===== */
 .account {
   background: linear-gradient(160deg, #fdf2ee, #fdf8f2);
@@ -650,7 +701,7 @@ a {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.92);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -667,29 +718,64 @@ a {
 
 .lightbox-inner {
   position: relative;
-  width: 90vw;
-  max-width: 420px;
-  aspect-ratio: 3/4;
-  background: var(--cream);
+  width: 92vw;
+  max-width: 440px;
   border-radius: 12px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 48px;
+}
+
+.lightbox-inner img {
+  width: 100%;
+  height: auto;
+  max-height: 88vh;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
 }
 
 .lightbox-close {
   position: absolute;
-  top: -40px;
-  right: 0;
-  background: none;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.5);
   border: none;
   color: white;
-  font-size: 24px;
+  font-size: 18px;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
 }
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  z-index: 10;
+}
+
+.lightbox-prev { left: 10px; }
+.lightbox-next { right: 10px; }
 
 /* ===== Responsive tweaks ===== */
 @media (max-width: 360px) {

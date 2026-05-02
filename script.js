@@ -1,5 +1,5 @@
 // ===== Countdown Timer =====
-const weddingDate = new Date('2026-06-06T14:30:00');
+const weddingDate = new Date('2026-11-14T11:30:00');
 
 function updateCountdown() {
   const now = new Date();
@@ -21,7 +21,9 @@ function updateCountdown() {
   document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
   document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
 
-  const dday = Math.ceil((weddingDate - new Date(new Date().toDateString())) / (1000 * 60 * 60 * 24));
+  const today = new Date(new Date().toDateString());
+  const weddingDay = new Date(weddingDate.toDateString());
+  const dday = Math.ceil((weddingDay - today) / (1000 * 60 * 60 * 24));
   document.getElementById('dday').textContent = `D - ${dday}`;
 }
 
@@ -38,28 +40,53 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 
 sections.forEach(sec => observer.observe(sec));
 
 // ===== Gallery Lightbox =====
-const galleryItems = document.querySelectorAll('.gallery-item');
-const lightbox = document.getElementById('lightbox');
+const photos = [
+  'images/photo1.jpg',
+  'images/photo2.jpg',
+  'images/photo3.jpg',
+  'images/photo4.jpg',
+  'images/photo5.jpg',
+];
 
-galleryItems.forEach(item => {
-  item.addEventListener('click', () => {
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  });
-});
+let currentIndex = 0;
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+function openLightbox(index) {
+  currentIndex = index;
+  lightboxImg.src = photos[currentIndex];
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
 
 function closeLightbox() {
   lightbox.classList.remove('open');
   document.body.style.overflow = '';
 }
 
+function changeLightbox(dir) {
+  currentIndex = (currentIndex + dir + photos.length) % photos.length;
+  lightboxImg.src = photos[currentIndex];
+}
+
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeLightbox();
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape')      closeLightbox();
+  if (e.key === 'ArrowRight')  changeLightbox(1);
+  if (e.key === 'ArrowLeft')   changeLightbox(-1);
+});
+
+// Swipe support for lightbox
+let touchStartX = 0;
+lightbox.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+lightbox.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  if (Math.abs(dx) > 50) changeLightbox(dx < 0 ? 1 : -1);
 });
 
 // ===== Copy Account Number =====
