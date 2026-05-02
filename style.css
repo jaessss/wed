@@ -243,11 +243,6 @@ a {
   margin-top: 4px;
 }
 
-.family-name .relation {
-  font-size: 11px;
-  color: var(--light-text);
-}
-
 .family-name.relation-text {
   font-size: 11px;
   color: var(--light-text);
@@ -256,42 +251,6 @@ a {
 
 .deceased {
   color: var(--light-text);
-}
-
-/* ===== Gallery Images ===== */
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover img { transform: scale(1.03); }
-
-/* ===== Deceased (고인) styles ===== */
-.chrysanthemum {
-  color: #b8a070;
-  font-size: 14px;
-}
-
-.deceased-label {
-  color: var(--light-text) !important;
-  font-size: 11px;
-  letter-spacing: 2px;
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  justify-content: center;
-}
-
-.deceased-name {
-  font-size: 14px;
-  color: var(--light-text);
-  text-align: center;
-  margin-top: 4px;
-  font-style: italic;
 }
 
 /* ===== Date & Countdown ===== */
@@ -358,13 +317,15 @@ a {
 .gallery {
   background: var(--white);
   text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 160px 160px 200px;
-  gap: 8px;
+  grid-auto-rows: 140px;
+  gap: 6px;
   margin-bottom: 16px;
 }
 
@@ -372,33 +333,27 @@ a {
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  background: #f2ede8;
 }
-
-.gallery-item:active { transform: scale(0.97); opacity: 0.9; }
 
 .gallery-item.tall { grid-row: span 2; }
-.gallery-item.wide { grid-column: span 2; }
+.gallery-item.wide { grid-column: span 2; grid-row: span 1; }
 
-.gallery-placeholder {
+.gallery-item img {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #f9ede8, #f2d9d0);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: var(--light-text);
-  font-size: 13px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
-.gallery-placeholder span { font-size: 28px; }
+.gallery-item:active img { transform: scale(0.97); }
 
 .gallery-hint {
   font-size: 11px;
   color: var(--light-text);
   letter-spacing: 1px;
+  margin-top: 8px;
 }
 
 /* ===== Venue ===== */
@@ -435,19 +390,12 @@ a {
   margin-bottom: 28px;
 }
 
-.map-placeholder {
+.map-wrap iframe {
+  width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: var(--light-text);
-  font-size: 13px;
+  border: 0;
+  display: block;
 }
-
-.map-placeholder span { font-size: 36px; }
-.map-sub { font-size: 11px; }
 
 .transport {
   text-align: left;
@@ -575,6 +523,31 @@ a {
 .contact-btn.full {
   width: 100%;
   text-align: center;
+}
+
+/* ===== Deceased styles ===== */
+.chrysanthemum {
+  color: #b8a070;
+  font-size: 14px;
+}
+
+.deceased-label {
+  color: var(--light-text) !important;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+}
+
+.deceased-name {
+  font-size: 14px;
+  color: var(--light-text);
+  text-align: center;
+  margin-top: 4px;
+  font-style: italic;
 }
 
 /* ===== Account ===== */
@@ -782,4 +755,5 @@ a {
   .cover-names { font-size: 26px; gap: 10px; }
   .count-item { min-width: 58px; padding: 12px 14px; }
   .count-num { font-size: 22px; }
+  .gallery-grid { grid-auto-rows: 120px; }
 }

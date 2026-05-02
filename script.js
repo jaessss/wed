@@ -46,11 +46,15 @@ sections.forEach(sec => observer.observe(sec));
 
 // ===== Gallery Lightbox =====
 const photos = [
-  'images/photo1.jpg',
-  'images/photo2.jpg',
-  'images/photo3.jpg',
-  'images/photo4.jpg',
-  'images/photo5.jpg',
+  'images/IMG_8058.jpeg',
+  'images/IMG_8116.jpeg',
+  'images/IMG_8121.jpeg',
+  'images/IMG_8135.jpeg',
+  'images/IMG_8151.jpeg',
+  'images/IMG_8157.jpeg',
+  'images/IMG_8165.jpeg',
+  'images/IMG_8172.jpeg',
+  'images/IMG_8176.jpeg',
 ];
 
 let currentIndex = 0;
