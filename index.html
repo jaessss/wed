@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>김민준 ♥ 이서연 결혼합니다</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Cover -->
+  <section class="cover fade-in">
+    <div class="cover-inner">
+      <p class="cover-date">2026 · 06 · 06</p>
+      <div class="cover-divider"></div>
+      <h1 class="cover-names">
+        <span class="groom">김민준</span>
+        <span class="heart">♥</span>
+        <span class="bride">이서연</span>
+      </h1>
+      <div class="cover-divider"></div>
+      <p class="cover-sub">결혼합니다</p>
+      <div class="flower-deco top-left">❀</div>
+      <div class="flower-deco bottom-right">❀</div>
+    </div>
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- Invitation Message -->
+  <section class="message section">
+    <div class="section-label">INVITATION</div>
+    <p class="message-text">
+      서로가 마주 보며 다져온 사랑을<br />
+      이제 함께 한 곳을 바라보며<br />
+      걸어가고자 합니다.<br /><br />
+      저희 두 사람이 사랑으로 만나<br />
+      가정을 이루게 되었습니다.<br />
+      오셔서 자리를 빛내 주세요.
+    </p>
+    <div class="family-info">
+      <div class="family-side">
+        <p class="family-label">신랑측</p>
+        <p class="family-name">김철수 · 박영희 <span class="relation">의 아들</span></p>
+        <p class="family-name bold">김민준</p>
+      </div>
+      <div class="family-divider">|</div>
+      <div class="family-side">
+        <p class="family-label">신부측</p>
+        <p class="family-name">이상훈 · 최미경 <span class="relation">의 딸</span></p>
+        <p class="family-name bold">이서연</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Date & Countdown -->
+  <section class="date-section section">
+    <div class="section-label">DATE</div>
+    <div class="date-display">
+      <p class="date-big">2026. 06. 06</p>
+      <p class="date-sub">토요일 오후 2시 30분</p>
+    </div>
+    <div class="countdown" id="countdown">
+      <div class="count-item">
+        <span class="count-num" id="days">--</span>
+        <span class="count-label">일</span>
+      </div>
+      <div class="count-item">
+        <span class="count-num" id="hours">--</span>
+        <span class="count-label">시간</span>
+      </div>
+      <div class="count-item">
+        <span class="count-num" id="minutes">--</span>
+        <span class="count-label">분</span>
+      </div>
+      <div class="count-item">
+        <span class="count-num" id="seconds">--</span>
+        <span class="count-label">초</span>
+      </div>
+    </div>
+    <p class="dday" id="dday"></p>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery section">
+    <div class="section-label">GALLERY</div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall">
+        <div class="gallery-placeholder">
+          <span>📷</span>
+          <p>사진 1</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <span>📷</span>
+          <p>사진 2</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <span>📷</span>
+          <p>사진 3</p>
+        </div>
+      </div>
+      <div class="gallery-item wide">
+        <div class="gallery-placeholder">
+          <span>📷</span>
+          <p>사진 4</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <span>📷</span>
+          <p>사진 5</p>
+        </div>
+      </div>
+    </div>
+    <p class="gallery-hint">이미지를 클릭하면 크게 볼 수 있어요</p>
+  </section>
+
+  <!-- Venue -->
+  <section class="venue section">
+    <div class="section-label">LOCATION</div>
+    <h3 class="venue-name">더 케이 서울 호텔</h3>
+    <p class="venue-hall">그랜드볼룸 2층</p>
+    <p class="venue-address">서울특별시 종로구 종로구 이화장길 71</p>
+
+    <div class="map-wrap">
+      <div class="map-placeholder">
+        <span>🗺</span>
+        <p>지도를 불러오는 중...</p>
+        <p class="map-sub">카카오맵 / 네이버지도로 연결됩니다</p>
+      </div>
+    </div>
+
+    <div class="transport">
+      <div class="transport-item">
+        <div class="transport-icon">🚇</div>
+        <div>
+          <p class="transport-title">지하철</p>
+          <p class="transport-desc">4호선 혜화역 2번 출구 도보 10분</p>
+        </div>
+      </div>
+      <div class="transport-item">
+        <div class="transport-icon">🚌</div>
+        <div>
+          <p class="transport-title">버스</p>
+          <p class="transport-desc">간선 102, 103 / 지선 7212 이화동 하차</p>
+        </div>
+      </div>
+      <div class="transport-item">
+        <div class="transport-icon">🚗</div>
+        <div>
+          <p class="transport-title">자가용</p>
+          <p class="transport-desc">주차 가능 (2시간 무료)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-buttons">
+      <a class="map-btn kakao" href="#" onclick="return false;">카카오맵</a>
+      <a class="map-btn naver" href="#" onclick="return false;">네이버지도</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact section">
+    <div class="section-label">CONTACT</div>
+    <div class="contact-group">
+      <div class="contact-side">
+        <p class="contact-role">신랑</p>
+        <p class="contact-name">김민준</p>
+        <div class="contact-buttons">
+          <a class="contact-btn" href="tel:010-1234-5678">📞 전화</a>
+          <a class="contact-btn" href="sms:010-1234-5678">💬 문자</a>
+        </div>
+        <p class="contact-role mt">신랑 아버지 · 어머니</p>
+        <div class="contact-buttons">
+          <a class="contact-btn" href="tel:010-0000-0001">아버지</a>
+          <a class="contact-btn" href="tel:010-0000-0002">어머니</a>
+        </div>
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-side">
+        <p class="contact-role">신부</p>
+        <p class="contact-name">이서연</p>
+        <div class="contact-buttons">
+          <a class="contact-btn" href="tel:010-9876-5432">📞 전화</a>
+          <a class="contact-btn" href="sms:010-9876-5432">💬 문자</a>
+        </div>
+        <p class="contact-role mt">신부 아버지 · 어머니</p>
+        <div class="contact-buttons">
+          <a class="contact-btn" href="tel:010-0000-0003">아버지</a>
+          <a class="contact-btn" href="tel:010-0000-0004">어머니</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Account -->
+  <section class="account section">
+    <div class="section-label">ACCOUNT</div>
+    <p class="account-desc">
+      직접 참석이 어려우신 분들을 위해<br />
+      계좌번호를 안내드립니다
+    </p>
+    <div class="account-group">
+      <div class="account-item" onclick="copyText('신한 110-111-111111 (신랑 김민준)', this)">
+        <p class="account-role">신랑측</p>
+        <p class="account-bank">신한은행</p>
+        <p class="account-num">110-111-111111</p>
+        <p class="account-holder">김민준</p>
+        <span class="copy-badge">복사</span>
+      </div>
+      <div class="account-item" onclick="copyText('국민 123-456-78-901234 (신부 이서연)', this)">
+        <p class="account-role">신부측</p>
+        <p class="account-bank">국민은행</p>
+        <p class="account-num">123-456-78-901234</p>
+        <p class="account-holder">이서연</p>
+        <span class="copy-badge">복사</span>
+      </div>
+    </div>
+    <div id="copy-toast" class="copy-toast">복사되었습니다 ✓</div>
+  </section>
+
+  <!-- Closing -->
+  <section class="closing section">
+    <div class="closing-flower">❀</div>
+    <p class="closing-text">
+      2026년 6월 6일 토요일<br />
+      오후 2시 30분<br /><br />
+      <strong>더 케이 서울 호텔 그랜드볼룸</strong><br /><br />
+      김민준 · 이서연 올림
+    </p>
+    <div class="closing-flower">❀</div>
+  </section>
+
+  <!-- Image Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-inner">
+      <div class="lightbox-placeholder">📷</div>
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
