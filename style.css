@@ -368,7 +368,7 @@ button {
 
 /* ===== Gallery Grid ===== */
 .gallery {
-  background: var(--white);
+  background: linear-gradient(160deg, #fdf2ee, #fdf8f2);
   text-align: center;
   padding-left: 4px;
   padding-right: 4px;
@@ -421,7 +421,7 @@ button {
 /* ===== Venue ===== */
 .venue {
   text-align: center;
-  background: var(--cream);
+  background: var(--white);
 }
 
 .venue-name {
@@ -519,7 +519,7 @@ button {
 
 /* ===== Account ===== */
 .account {
-  background: linear-gradient(160deg, #fdf2ee, #fdf8f2);
+  background: var(--white);
   text-align: center;
   border-bottom: none;
   padding-bottom: 70px;
