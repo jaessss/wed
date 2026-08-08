@@ -127,8 +127,9 @@ button {
 /* ===== Cover ===== */
 .cover {
   position: relative;
-  min-height: 100vh;
-  min-height: 100svh;
+  /* Height is frozen at load by the --vh script in <head>, so the URL bar
+     collapsing on scroll can't resize the cover and re-crop the photo. */
+  min-height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
   align-items: center;

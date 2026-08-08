@@ -11,6 +11,21 @@
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <script>
+    // Measure the viewport height once, before first paint, and freeze it.
+    // Mobile browsers grow the viewport when the URL bar collapses on scroll;
+    // letting the cover follow that would re-crop the photo and look like a zoom.
+    (function () {
+      function lockViewportHeight() {
+        document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
+      }
+      lockViewportHeight();
+      // Orientation change is a real layout change, so re-measure there only.
+      window.addEventListener('orientationchange', function () {
+        setTimeout(lockViewportHeight, 150);
+      });
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
 </head>
 <body>
