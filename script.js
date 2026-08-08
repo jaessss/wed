@@ -16,20 +16,22 @@ setTimeout(() => {
 }, 4000);
 
 // ===== Cover Script Text: letter-by-letter reveal =====
-const coverScript = document.querySelector('.cover-script');
-if (coverScript) {
-  const text = coverScript.textContent;
-  const baseDelay = 3.6; // seconds — matches when .cover-inner finishes fading in
-  const step = 0.06;
-  coverScript.textContent = '';
-  [...text].forEach((char, i) => {
+const scriptBaseDelay = 3.6; // seconds — matches when .cover-inner finishes fading in
+const scriptStep = 0.06;
+let scriptLetterIndex = 0;
+
+document.querySelectorAll('.cover-script .script-line').forEach(line => {
+  const text = line.textContent;
+  line.textContent = '';
+  [...text].forEach(char => {
     const letter = document.createElement('span');
     letter.className = 'letter';
-    letter.textContent = char === ' ' ? ' ' : char;
-    letter.style.animationDelay = `${baseDelay + i * step}s`;
-    coverScript.appendChild(letter);
+    letter.textContent = char === ' ' ? '\u00a0' : char;
+    letter.style.animationDelay = `${scriptBaseDelay + scriptLetterIndex * scriptStep}s`;
+    line.appendChild(letter);
+    scriptLetterIndex++;
   });
-}
+});
 
 // ===== Countdown Timer =====
 const weddingDate = new Date('2026-11-14T11:30:00');

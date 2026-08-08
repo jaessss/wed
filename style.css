@@ -159,6 +159,7 @@ button {
 
 .cover-inner {
   position: relative;
+  top: 10px;
   z-index: 1;
   text-align: center;
   color: var(--white);
@@ -187,6 +188,7 @@ button {
   font-family: 'Alex Brush', cursive;
   font-weight: 400;
   font-size: 52px;
+  line-height: 1.15;
   color: var(--blush);
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
 }
@@ -200,47 +202,6 @@ button {
 
 @keyframes letterIn {
   to { opacity: 1; transform: translateY(0); }
-}
-
-.scroll-hint {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 10px;
-  z-index: 1;
-  animation: fadeIn 1s 3.6s both;
-}
-
-.scroll-hint span {
-  display: inline-block;
-  letter-spacing: 3px;
-  /* Cancel the trailing letter-spacing gap after the last glyph so the
-     shrink-to-fit box (used to center this element) matches the visual
-     text width instead of overshooting to the right. */
-  margin-right: -3px;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.scroll-arrow {
-  width: 1px;
-  height: 30px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), transparent);
-  margin: 8px auto 0;
-  animation: scrollDown 1.5s ease-in-out infinite;
-}
-
-@keyframes scrollDown {
-  0% { transform: scaleY(0); transform-origin: top; }
-  50% { transform: scaleY(1); transform-origin: top; }
-  51% { transform: scaleY(1); transform-origin: bottom; }
-  100% { transform: scaleY(0); transform-origin: bottom; }
 }
 
 /* ===== Message ===== */
