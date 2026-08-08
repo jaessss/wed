@@ -95,6 +95,7 @@ const photos = [
   'images/gallery/18.jpg',
   'images/gallery/19.jpg',
   'images/gallery/20.jpg',
+  'images/gallery/21.jpg',
 ];
 
 // ===== Gallery: Show More =====
