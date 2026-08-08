@@ -15,6 +15,22 @@ setTimeout(() => {
   document.body.classList.remove('intro-locked');
 }, 4000);
 
+// ===== Cover Script Text: letter-by-letter reveal =====
+const coverScript = document.querySelector('.cover-script');
+if (coverScript) {
+  const text = coverScript.textContent;
+  const baseDelay = 3.6; // seconds — matches when .cover-inner finishes fading in
+  const step = 0.06;
+  coverScript.textContent = '';
+  [...text].forEach((char, i) => {
+    const letter = document.createElement('span');
+    letter.className = 'letter';
+    letter.textContent = char === ' ' ? ' ' : char;
+    letter.style.animationDelay = `${baseDelay + i * step}s`;
+    coverScript.appendChild(letter);
+  });
+}
+
 // ===== Countdown Timer =====
 const weddingDate = new Date('2026-11-14T11:30:00');
 

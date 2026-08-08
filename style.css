@@ -184,13 +184,22 @@ button {
 }
 
 .cover-script {
-  font-family: 'Bodoni Moda', serif;
-  font-style: italic;
-  font-weight: 500;
-  font-size: 40px;
-  letter-spacing: 1px;
+  font-family: 'Alex Brush', cursive;
+  font-weight: 400;
+  font-size: 52px;
   color: var(--blush);
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+}
+
+.cover-script .letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: letterIn 0.6s ease forwards;
+}
+
+@keyframes letterIn {
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .scroll-hint {
@@ -839,7 +848,7 @@ button {
 
 /* ===== Responsive tweaks ===== */
 @media (max-width: 360px) {
-  .cover-script { font-size: 32px; }
+  .cover-script { font-size: 42px; }
   .count-item { min-width: 56px; padding: 12px 12px; }
   .count-num { font-size: 22px; }
   .cal-day { font-size: 13px; line-height: 28px; height: 28px; }
