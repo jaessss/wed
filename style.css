@@ -53,22 +53,26 @@ button {
   top: 16px;
   right: 16px;
   z-index: 2200;
-  width: 40px;
-  height: 40px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   border: none;
   background: rgba(40, 32, 26, 0.4);
-  color: var(--white);
-  font-size: 16px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(4px);
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
 
 .bgm-toggle:active {
   background: rgba(40, 32, 26, 0.6);
+}
+
+.bgm-toggle.playing {
+  color: var(--white);
 }
 
 /* ===== Intro Overlay ===== */

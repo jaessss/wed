@@ -20,7 +20,7 @@ const bgm = document.getElementById('bgm');
 const bgmToggle = document.getElementById('bgm-toggle');
 
 function setBgmIcon(playing) {
-  bgmToggle.textContent = playing ? '🔊' : '🔇';
+  bgmToggle.classList.toggle('playing', playing);
   bgmToggle.setAttribute('aria-label', playing ? '배경음악 정지' : '배경음악 재생');
 }
 
