@@ -4,14 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <title>노재서 ♥ 강나경 결혼합니다</title>
+  <meta name="description" content="2026년 11월 14일 토요일 오전 11시 30분, W스퀘어컨벤션 1층 그레이스홀" />
+  <meta property="og:title" content="노재서 ♥ 강나경 결혼합니다" />
+  <meta property="og:description" content="2026년 11월 14일 토요일 오전 11시 30분 · W스퀘어컨벤션 1층 그레이스홀" />
+  <meta property="og:image" content="images/IMG_8058.jpeg" />
+  <meta property="og:type" content="website" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
 </head>
 <body>
 
+  <!-- Intro Overlay -->
+  <div id="intro" class="intro">
+    <div class="intro-inner">
+      <div class="intro-line"></div>
+      <p class="intro-date">2026 · 11 · 14</p>
+      <h2 class="intro-names">노재서 &nbsp;&amp;&nbsp; 강나경</h2>
+      <div class="intro-line"></div>
+    </div>
+  </div>
+
   <!-- Cover -->
-  <section class="cover fade-in">
+  <section class="cover">
+    <img class="cover-photo" src="images/IMG_8058.jpeg" alt="노재서 강나경 웨딩 사진" />
+    <div class="cover-scrim"></div>
     <div class="cover-inner">
       <p class="cover-date">2026 · 11 · 14</p>
       <div class="cover-divider"></div>
@@ -22,8 +39,6 @@
       </h1>
       <div class="cover-divider"></div>
       <p class="cover-sub">결혼합니다</p>
-      <div class="flower-deco top-left">❀</div>
-      <div class="flower-deco bottom-right">❀</div>
     </div>
     <div class="scroll-hint">
       <span>scroll</span>
@@ -58,13 +73,33 @@
     </div>
   </section>
 
-  <!-- Date & Countdown -->
+  <!-- Date & Calendar & Countdown -->
   <section class="date-section section">
     <div class="section-label">DATE</div>
     <div class="date-display">
       <p class="date-big">2026. 11. 14</p>
       <p class="date-sub">토요일 오전 11시 30분</p>
     </div>
+
+    <div class="calendar">
+      <div class="calendar-head">
+        <span class="cal-dow sun">일</span>
+        <span class="cal-dow">월</span>
+        <span class="cal-dow">화</span>
+        <span class="cal-dow">수</span>
+        <span class="cal-dow">목</span>
+        <span class="cal-dow">금</span>
+        <span class="cal-dow sat">토</span>
+      </div>
+      <div class="calendar-grid">
+        <span class="cal-day sun">1</span><span class="cal-day">2</span><span class="cal-day">3</span><span class="cal-day">4</span><span class="cal-day">5</span><span class="cal-day">6</span><span class="cal-day sat">7</span>
+        <span class="cal-day sun">8</span><span class="cal-day">9</span><span class="cal-day">10</span><span class="cal-day">11</span><span class="cal-day">12</span><span class="cal-day">13</span><span class="cal-day sat today">14</span>
+        <span class="cal-day sun">15</span><span class="cal-day">16</span><span class="cal-day">17</span><span class="cal-day">18</span><span class="cal-day">19</span><span class="cal-day">20</span><span class="cal-day sat">21</span>
+        <span class="cal-day sun">22</span><span class="cal-day">23</span><span class="cal-day">24</span><span class="cal-day">25</span><span class="cal-day">26</span><span class="cal-day">27</span><span class="cal-day sat">28</span>
+        <span class="cal-day sun">29</span><span class="cal-day">30</span>
+      </div>
+    </div>
+
     <div class="countdown" id="countdown">
       <div class="count-item">
         <span class="count-num" id="days">--</span>
@@ -89,36 +124,37 @@
   <!-- Gallery -->
   <section class="gallery section">
     <div class="section-label">GALLERY</div>
-    <div class="gallery-grid">
-      <div class="gallery-item tall" onclick="openLightbox(0)">
-        <img src="images/IMG_8058.jpeg" alt="웨딩 사진 1" loading="lazy" />
+    <div class="carousel-track" id="carousel-track">
+      <div class="carousel-slide" onclick="openLightbox(0)">
+        <img src="images/IMG_8058.jpeg" alt="웨딩 사진 1" />
       </div>
-      <div class="gallery-item" onclick="openLightbox(1)">
+      <div class="carousel-slide" onclick="openLightbox(1)">
         <img src="images/IMG_8116.jpeg" alt="웨딩 사진 2" loading="lazy" />
       </div>
-      <div class="gallery-item" onclick="openLightbox(2)">
+      <div class="carousel-slide" onclick="openLightbox(2)">
         <img src="images/IMG_8121.jpeg" alt="웨딩 사진 3" loading="lazy" />
       </div>
-      <div class="gallery-item wide" onclick="openLightbox(3)">
+      <div class="carousel-slide" onclick="openLightbox(3)">
         <img src="images/IMG_8135.jpeg" alt="웨딩 사진 4" loading="lazy" />
       </div>
-      <div class="gallery-item" onclick="openLightbox(4)">
+      <div class="carousel-slide" onclick="openLightbox(4)">
         <img src="images/IMG_8151.jpeg" alt="웨딩 사진 5" loading="lazy" />
       </div>
-      <div class="gallery-item" onclick="openLightbox(5)">
+      <div class="carousel-slide" onclick="openLightbox(5)">
         <img src="images/IMG_8157.jpeg" alt="웨딩 사진 6" loading="lazy" />
       </div>
-      <div class="gallery-item tall" onclick="openLightbox(6)">
+      <div class="carousel-slide" onclick="openLightbox(6)">
         <img src="images/IMG_8165.jpeg" alt="웨딩 사진 7" loading="lazy" />
       </div>
-      <div class="gallery-item" onclick="openLightbox(7)">
+      <div class="carousel-slide" onclick="openLightbox(7)">
         <img src="images/IMG_8172.jpeg" alt="웨딩 사진 8" loading="lazy" />
       </div>
-      <div class="gallery-item" onclick="openLightbox(8)">
+      <div class="carousel-slide" onclick="openLightbox(8)">
         <img src="images/IMG_8176.jpeg" alt="웨딩 사진 9" loading="lazy" />
       </div>
     </div>
-    <p class="gallery-hint">이미지를 클릭하면 크게 볼 수 있어요</p>
+    <div class="carousel-dots" id="carousel-dots"></div>
+    <p class="gallery-hint">좌우로 넘겨보세요 · 탭하면 크게 볼 수 있어요</p>
   </section>
 
   <!-- Venue -->
@@ -211,28 +247,28 @@
       계좌번호를 안내드립니다
     </p>
     <div class="account-group">
-      <div class="account-item" onclick="copyText('새마을금고 1234-1234 노재서', this)">
+      <div class="account-item" onclick="copyText('새마을금고 1234-1234 노재서')">
         <p class="account-role">신랑 노재서</p>
         <p class="account-bank">새마을금고</p>
         <p class="account-num">1234-1234</p>
         <p class="account-holder">노재서</p>
         <span class="copy-badge">복사</span>
       </div>
-      <div class="account-item" onclick="copyText('경남은행 1234-3456 노경용', this)">
+      <div class="account-item" onclick="copyText('경남은행 1234-3456 노경용')">
         <p class="account-role">신랑 아버지 노경용</p>
         <p class="account-bank">경남은행</p>
         <p class="account-num">1234-3456</p>
         <p class="account-holder">노경용</p>
         <span class="copy-badge">복사</span>
       </div>
-      <div class="account-item" onclick="copyText('카카오뱅크 1234-1234 강나경', this)">
+      <div class="account-item" onclick="copyText('카카오뱅크 1234-1234 강나경')">
         <p class="account-role">신부 강나경</p>
         <p class="account-bank">카카오뱅크</p>
         <p class="account-num">1234-1234</p>
         <p class="account-holder">강나경</p>
         <span class="copy-badge">복사</span>
       </div>
-      <div class="account-item" onclick="copyText('우리은행 4321-4321 김성은', this)">
+      <div class="account-item" onclick="copyText('우리은행 4321-4321 김성은')">
         <p class="account-role">신부 어머니 김성은</p>
         <p class="account-bank">우리은행</p>
         <p class="account-num">4321-4321</p>
@@ -240,7 +276,6 @@
         <span class="copy-badge">복사</span>
       </div>
     </div>
-    <div id="copy-toast" class="copy-toast">복사되었습니다 ✓</div>
   </section>
 
   <!-- Closing -->
@@ -253,7 +288,14 @@
       노재서 · 강나경 올림
     </p>
     <div class="closing-flower">❀</div>
+
+    <div class="share-buttons">
+      <button class="share-btn primary" onclick="shareInvitation()">청첩장 공유하기</button>
+      <button class="share-btn" onclick="copyLink()">링크 복사</button>
+    </div>
   </section>
+
+  <div id="copy-toast" class="copy-toast">복사되었습니다 ✓</div>
 
   <!-- Image Lightbox -->
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
@@ -262,6 +304,7 @@
       <button class="lightbox-close" onclick="closeLightbox()">✕</button>
       <button class="lightbox-prev" onclick="changeLightbox(-1)">‹</button>
       <button class="lightbox-next" onclick="changeLightbox(1)">›</button>
+      <span class="lightbox-counter" id="lightbox-counter"></span>
     </div>
   </div>
 

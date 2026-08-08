@@ -1,3 +1,20 @@
+// ===== Intro Overlay =====
+const intro = document.getElementById('intro');
+document.body.classList.add('intro-locked');
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    intro.classList.add('hide');
+    document.body.classList.remove('intro-locked');
+  }, 2200);
+});
+
+// Fallback: never leave the intro stuck if `load` is slow or already fired
+setTimeout(() => {
+  intro.classList.add('hide');
+  document.body.classList.remove('intro-locked');
+}, 4000);
+
 // ===== Countdown Timer =====
 const weddingDate = new Date('2026-11-14T11:30:00');
 
@@ -44,7 +61,7 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach(sec => observer.observe(sec));
 
-// ===== Gallery Lightbox =====
+// ===== Gallery Carousel =====
 const photos = [
   'images/IMG_8058.jpeg',
   'images/IMG_8116.jpeg',
@@ -57,13 +74,46 @@ const photos = [
   'images/IMG_8176.jpeg',
 ];
 
+const track = document.getElementById('carousel-track');
+const dotsWrap = document.getElementById('carousel-dots');
+
+photos.forEach((_, i) => {
+  const dot = document.createElement('button');
+  dot.className = 'dot' + (i === 0 ? ' active' : '');
+  dot.setAttribute('aria-label', `${i + 1}번 사진으로 이동`);
+  dot.addEventListener('click', () => {
+    track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
+  });
+  dotsWrap.appendChild(dot);
+});
+
+const dots = dotsWrap.querySelectorAll('.dot');
+
+let scrollTick = false;
+track.addEventListener('scroll', () => {
+  if (scrollTick) return;
+  scrollTick = true;
+  requestAnimationFrame(() => {
+    const index = Math.round(track.scrollLeft / track.clientWidth);
+    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    scrollTick = false;
+  });
+});
+
+// ===== Lightbox =====
 let currentIndex = 0;
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCounter = document.getElementById('lightbox-counter');
+
+function renderLightbox() {
+  lightboxImg.src = photos[currentIndex];
+  lightboxCounter.textContent = `${currentIndex + 1} / ${photos.length}`;
+}
 
 function openLightbox(index) {
   currentIndex = index;
-  lightboxImg.src = photos[currentIndex];
+  renderLightbox();
   lightbox.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -75,17 +125,17 @@ function closeLightbox() {
 
 function changeLightbox(dir) {
   currentIndex = (currentIndex + dir + photos.length) % photos.length;
-  lightboxImg.src = photos[currentIndex];
+  renderLightbox();
 }
 
 document.addEventListener('keydown', e => {
   if (!lightbox.classList.contains('open')) return;
-  if (e.key === 'Escape')      closeLightbox();
-  if (e.key === 'ArrowRight')  changeLightbox(1);
-  if (e.key === 'ArrowLeft')   changeLightbox(-1);
+  if (e.key === 'Escape')     closeLightbox();
+  if (e.key === 'ArrowRight') changeLightbox(1);
+  if (e.key === 'ArrowLeft')  changeLightbox(-1);
 });
 
-// Swipe support for lightbox
+// Swipe support inside the lightbox
 let touchStartX = 0;
 lightbox.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
 lightbox.addEventListener('touchend', e => {
@@ -93,23 +143,54 @@ lightbox.addEventListener('touchend', e => {
   if (Math.abs(dx) > 50) changeLightbox(dx < 0 ? 1 : -1);
 });
 
-// ===== Copy Account Number =====
-function copyText(text, el) {
+// ===== Copy & Share =====
+function copyToClipboard(text) {
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(text);
-  } else {
-    const ta = document.createElement('textarea');
-    ta.value = text;
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
+    return navigator.clipboard.writeText(text);
   }
-  showToast();
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  document.execCommand('copy');
+  document.body.removeChild(ta);
+  return Promise.resolve();
 }
 
-function showToast() {
-  const toast = document.getElementById('copy-toast');
+function copyText(text) {
+  copyToClipboard(text).then(() => showToast('복사되었습니다 ✓'));
+}
+
+function copyLink() {
+  copyToClipboard(window.location.href).then(() => showToast('링크가 복사되었습니다 ✓'));
+}
+
+async function shareInvitation() {
+  const shareData = {
+    title: '노재서 ♥ 강나경 결혼합니다',
+    text: '2026년 11월 14일 토요일 오전 11시 30분\nW스퀘어컨벤션 1층 그레이스홀',
+    url: window.location.href,
+  };
+
+  if (navigator.share) {
+    try {
+      await navigator.share(shareData);
+    } catch (err) {
+      // User cancelled the share sheet — nothing to do
+    }
+    return;
+  }
+  copyLink();
+}
+
+const toast = document.getElementById('copy-toast');
+let toastTimer;
+
+function showToast(message) {
+  toast.textContent = message;
   toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 2000);
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2000);
 }
