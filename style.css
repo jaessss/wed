@@ -201,9 +201,17 @@ button {
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
   font-size: 10px;
-  letter-spacing: 3px;
   z-index: 1;
   animation: fadeIn 1s 3.6s both;
+}
+
+.scroll-hint span {
+  display: inline-block;
+  letter-spacing: 3px;
+  /* Cancel the trailing letter-spacing gap after the last glyph so the
+     shrink-to-fit box (used to center this element) matches the visual
+     text width instead of overshooting to the right. */
+  margin-right: -3px;
 }
 
 @keyframes fadeIn {
@@ -242,42 +250,43 @@ button {
 
 .family-info {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   border-top: 1px solid rgba(196, 135, 124, 0.2);
   padding-top: 32px;
 }
 
 .family-side {
-  width: 100%;
+  flex: 1;
   text-align: center;
+  padding: 0 12px;
 }
 
-.family-side + .family-side {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(196, 135, 124, 0.15);
+.family-divider {
+  color: rgba(196, 135, 124, 0.3);
+  font-size: 32px;
+  font-weight: 100;
+  line-height: 1;
 }
 
-.family-label {
-  font-size: 11px;
-  letter-spacing: 3px;
-  color: var(--gold);
-  margin-bottom: 10px;
-}
-
-.family-name {
-  font-size: 14px;
-  color: var(--light-text);
-  font-weight: 300;
-  line-height: 1.6;
-  white-space: nowrap;
+.family-name-main {
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 400;
+  margin-bottom: 8px;
 }
 
 .name-highlight {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--dark);
   font-weight: 600;
+}
+
+.family-name {
+  font-size: 12px;
+  color: var(--light-text);
+  font-weight: 300;
+  line-height: 1.6;
 }
 
 .deceased {
@@ -549,94 +558,18 @@ button {
 .map-btn.kakao { background: #FAE100; color: #3a1d1d; }
 .map-btn.naver { background: #03C75A; color: var(--white); }
 
-/* ===== Contact ===== */
-.contact {
-  background: var(--white);
-  text-align: center;
-}
-
-.contact-group {
-  display: flex;
-  align-items: flex-start;
-}
-
-.contact-side {
-  flex: 1;
-  padding: 0 8px;
-}
-
-.contact-divider {
-  width: 1px;
-  background: rgba(196, 135, 124, 0.2);
-  align-self: stretch;
-  margin: 0 8px;
-}
-
-.contact-role {
-  font-size: 11px;
-  letter-spacing: 2px;
-  color: var(--gold);
-  margin-bottom: 4px;
-}
-
-.contact-role.mt { margin-top: 20px; }
-
-.contact-name {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dark);
-  margin-bottom: 12px;
-}
-
-.contact-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.contact-btn {
-  display: block;
-  padding: 10px 8px;
-  background: var(--cream);
-  border: 1px solid rgba(196, 135, 124, 0.25);
-  border-radius: 10px;
-  font-size: 13px;
-  color: var(--text);
-  transition: background 0.2s, color 0.2s;
-}
-
-.contact-btn:active {
-  background: var(--blush);
-  color: var(--deep-rose);
-}
-
-.contact-btn.full {
-  width: 100%;
-  text-align: center;
-}
-
-.deceased-label {
-  color: var(--light-text) !important;
-  font-size: 11px;
-  letter-spacing: 2px;
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  justify-content: center;
-}
-
-.deceased-name {
-  font-size: 14px;
-  color: var(--light-text);
-  margin-top: 4px;
-  font-style: italic;
-}
-
 /* ===== Account ===== */
 .account {
   background: linear-gradient(160deg, #fdf2ee, #fdf8f2);
   text-align: center;
+}
+
+.account-heading {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--dark);
+  letter-spacing: 1px;
+  margin-bottom: 24px;
 }
 
 .account-desc {
