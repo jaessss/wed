@@ -574,12 +574,12 @@ button {
 }
 
 .account-chevron {
-  color: var(--gold);
-  transition: transform 0.25s ease;
-}
-
-.account-toggle[aria-expanded="true"] .account-chevron {
-  transform: rotate(180deg);
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-right: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  transform: rotate(45deg);
 }
 
 .account-panel {
