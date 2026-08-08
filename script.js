@@ -85,6 +85,16 @@ const photos = [
   'images/gallery/20.jpg',
 ];
 
+// ===== Gallery: Show More =====
+const galleryGrid = document.getElementById('gallery-grid');
+const galleryMoreBtn = document.getElementById('gallery-more-btn');
+const galleryHiddenCount = galleryGrid.querySelectorAll('.g-item.more-hidden').length;
+
+function toggleGalleryMore() {
+  const expanded = galleryGrid.classList.toggle('expanded');
+  galleryMoreBtn.textContent = expanded ? '접기' : `사진 더보기 (${galleryHiddenCount})`;
+}
+
 // ===== Lightbox =====
 let currentIndex = 0;
 const lightbox = document.getElementById('lightbox');

@@ -26,8 +26,7 @@
       });
     })();
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,500&family=Gowun+Dodum&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -48,7 +47,7 @@
     <div class="cover-inner">
       <p class="cover-date">2026 · 11 · 14</p>
       <div class="cover-divider"></div>
-      <p class="cover-script">Our Wedding Day</p>
+      <p class="cover-script">We're getting married.</p>
       <div class="cover-divider"></div>
     </div>
     <div class="scroll-hint">
@@ -61,25 +60,20 @@
   <section class="message section">
     <div class="section-label">INVITATION</div>
     <p class="message-text">
-      서로가 마주 보며 다져온 사랑을<br />
-      이제 함께 한 곳을 바라보며<br />
-      걸어가고자 합니다.<br /><br />
-      저희 두 사람이 사랑으로 만나<br />
-      가정을 이루게 되었습니다.<br />
-      오셔서 자리를 빛내 주세요.
+      함께 있을 때 가장 나다운 모습이 되고,<br />
+      함께 있을 때 미래를 꿈꾸게 하는 사람을 만나<br />
+      함께 맞는 열한 번째 가을, 결혼합니다.<br /><br />
+      부부라는 이름으로 시작하는 뜻깊은 순간에<br />
+      늘 곁에서 아껴주셨던 소중한 분들을 모십니다.
     </p>
     <div class="family-info">
       <div class="family-side">
         <p class="family-label">신랑측</p>
-        <p class="family-name">노경용 · <span class="deceased"><span class="chrysanthemum">✿</span> 최보경</span></p>
-        <p class="family-name relation-text">의 아들</p>
-        <p class="family-name bold">노재서</p>
+        <p class="family-name">노경용 · <span class="deceased"><span class="chrysanthemum">✿</span> 최보경</span>의 아들 <span class="name-highlight">노재서</span></p>
       </div>
-      <div class="family-divider">|</div>
       <div class="family-side">
         <p class="family-label">신부측</p>
-        <p class="family-name">어머니 김성은의 딸</p>
-        <p class="family-name bold">강나경</p>
+        <p class="family-name">어머니 김성은의 딸 <span class="name-highlight">강나경</span></p>
       </div>
     </div>
   </section>
@@ -135,7 +129,7 @@
   <!-- Gallery -->
   <section class="gallery section">
     <div class="section-label">GALLERY</div>
-    <div class="gallery-grid">
+    <div class="gallery-grid" id="gallery-grid">
       <div class="g-item" onclick="openLightbox(0)">
         <img src="images/gallery/01.jpg" alt="웨딩 사진 1" />
       </div>
@@ -163,40 +157,41 @@
       <div class="g-item" onclick="openLightbox(8)">
         <img src="images/gallery/09.jpg" alt="웨딩 사진 9" loading="lazy" />
       </div>
-      <div class="g-item" onclick="openLightbox(9)">
+      <div class="g-item more-hidden" onclick="openLightbox(9)">
         <img src="images/gallery/10.jpg" alt="웨딩 사진 10" loading="lazy" />
       </div>
-      <div class="g-item" onclick="openLightbox(10)">
+      <div class="g-item more-hidden" onclick="openLightbox(10)">
         <img src="images/gallery/11.jpg" alt="웨딩 사진 11" loading="lazy" />
       </div>
-      <div class="g-item" onclick="openLightbox(11)">
+      <div class="g-item more-hidden" onclick="openLightbox(11)">
         <img src="images/gallery/12.jpg" alt="웨딩 사진 12" loading="lazy" />
       </div>
-      <div class="g-item" onclick="openLightbox(12)">
+      <div class="g-item more-hidden" onclick="openLightbox(12)">
         <img src="images/gallery/13.jpg" alt="웨딩 사진 13" loading="lazy" />
       </div>
-      <div class="g-item" onclick="openLightbox(13)">
+      <div class="g-item more-hidden" onclick="openLightbox(13)">
         <img src="images/gallery/14.jpg" alt="웨딩 사진 14" loading="lazy" />
       </div>
-      <div class="g-item" onclick="openLightbox(14)">
+      <div class="g-item more-hidden" onclick="openLightbox(14)">
         <img src="images/gallery/15.jpg" alt="웨딩 사진 15" loading="lazy" />
       </div>
-      <div class="g-item" onclick="openLightbox(15)">
+      <div class="g-item more-hidden" onclick="openLightbox(15)">
         <img src="images/gallery/16.jpg" alt="웨딩 사진 16" loading="lazy" />
       </div>
-      <div class="g-item" onclick="openLightbox(16)">
+      <div class="g-item more-hidden" onclick="openLightbox(16)">
         <img src="images/gallery/17.jpg" alt="웨딩 사진 17" loading="lazy" />
       </div>
-      <div class="g-item" onclick="openLightbox(17)">
+      <div class="g-item more-hidden" onclick="openLightbox(17)">
         <img src="images/gallery/18.jpg" alt="웨딩 사진 18" loading="lazy" />
       </div>
-      <div class="g-item" onclick="openLightbox(18)">
+      <div class="g-item more-hidden" onclick="openLightbox(18)">
         <img src="images/gallery/19.jpg" alt="웨딩 사진 19" loading="lazy" />
       </div>
-      <div class="g-item" onclick="openLightbox(19)">
+      <div class="g-item more-hidden" onclick="openLightbox(19)">
         <img src="images/gallery/20.jpg" alt="웨딩 사진 20" loading="lazy" />
       </div>
     </div>
+    <button class="gallery-more-btn" id="gallery-more-btn" type="button" onclick="toggleGalleryMore()">사진 더보기 (11)</button>
   </section>
 
   <!-- Venue -->
