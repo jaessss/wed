@@ -63,15 +63,26 @@ sections.forEach(sec => observer.observe(sec));
 
 // ===== Gallery Carousel =====
 const photos = [
-  'images/IMG_8058.jpeg',
-  'images/IMG_8116.jpeg',
-  'images/IMG_8121.jpeg',
-  'images/IMG_8135.jpeg',
-  'images/IMG_8151.jpeg',
-  'images/IMG_8157.jpeg',
-  'images/IMG_8165.jpeg',
-  'images/IMG_8172.jpeg',
-  'images/IMG_8176.jpeg',
+  'images/gallery/01.jpg',
+  'images/gallery/02.jpg',
+  'images/gallery/03.jpg',
+  'images/gallery/04.jpg',
+  'images/gallery/05.jpg',
+  'images/gallery/06.jpg',
+  'images/gallery/07.jpg',
+  'images/gallery/08.jpg',
+  'images/gallery/09.jpg',
+  'images/gallery/10.jpg',
+  'images/gallery/11.jpg',
+  'images/gallery/12.jpg',
+  'images/gallery/13.jpg',
+  'images/gallery/14.jpg',
+  'images/gallery/15.jpg',
+  'images/gallery/16.jpg',
+  'images/gallery/17.jpg',
+  'images/gallery/18.jpg',
+  'images/gallery/19.jpg',
+  'images/gallery/20.jpg',
 ];
 
 const track = document.getElementById('carousel-track');
@@ -184,7 +195,7 @@ function copyLink() {
 async function shareInvitation() {
   const shareData = {
     title: '노재서 ♥ 강나경 결혼합니다',
-    text: '2026년 11월 14일 토요일 오전 11시 30분\nW스퀘어컨벤션 1층 그레이스홀',
+    text: '2026년 11월 14일 토요일 오전 11시 30분\nW스퀘어컨벤션 로비층 그레이스홀',
     url: window.location.href,
   };
 

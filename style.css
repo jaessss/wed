@@ -824,14 +824,6 @@ button {
   padding-bottom: 70px;
 }
 
-.closing-flower {
-  font-size: 32px;
-  color: var(--rose);
-  opacity: 0.5;
-  margin: 12px 0;
-  display: block;
-}
-
 .closing-text {
   font-size: 15px;
   font-weight: 300;
