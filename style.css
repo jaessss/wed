@@ -159,7 +159,7 @@ button {
 
 .cover-inner {
   position: relative;
-  top: 10px;
+  top: 40px;
   z-index: 1;
   text-align: center;
   color: var(--white);
@@ -289,12 +289,8 @@ button {
 }
 
 .calendar {
-  background: var(--white);
-  border: 1px solid rgba(196, 135, 124, 0.2);
-  border-radius: 16px;
-  padding: 20px 16px;
+  padding: 0 16px;
   margin-bottom: 32px;
-  box-shadow: 0 2px 14px rgba(196, 135, 124, 0.08);
 }
 
 .calendar-head,
@@ -307,7 +303,6 @@ button {
 .calendar-head {
   padding-bottom: 10px;
   margin-bottom: 8px;
-  border-bottom: 1px solid rgba(196, 135, 124, 0.18);
 }
 
 .cal-dow {
