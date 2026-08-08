@@ -366,12 +366,6 @@ button {
   letter-spacing: 1px;
 }
 
-.dday {
-  font-size: 13px;
-  color: var(--gold);
-  letter-spacing: 2px;
-}
-
 /* ===== Gallery Grid ===== */
 .gallery {
   background: var(--white);

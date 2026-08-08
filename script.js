@@ -42,7 +42,6 @@ function updateCountdown() {
 
   if (diff <= 0) {
     document.getElementById('countdown').style.display = 'none';
-    document.getElementById('dday').textContent = '오늘이 결혼식 날입니다 🎉';
     return;
   }
 
@@ -55,11 +54,6 @@ function updateCountdown() {
   document.getElementById('hours').textContent   = String(hours).padStart(2, '0');
   document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
   document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-
-  const today = new Date(new Date().toDateString());
-  const weddingDay = new Date(weddingDate.toDateString());
-  const dday = Math.ceil((weddingDay - today) / (1000 * 60 * 60 * 24));
-  document.getElementById('dday').textContent = `D - ${dday}`;
 }
 
 updateCountdown();
