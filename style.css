@@ -527,6 +527,8 @@ button {
 .account {
   background: linear-gradient(160deg, #fdf2ee, #fdf8f2);
   text-align: center;
+  border-bottom: none;
+  padding-bottom: 70px;
 }
 
 .account-heading {
@@ -664,54 +666,6 @@ button {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
-
-/* ===== Closing & Share ===== */
-.closing {
-  text-align: center;
-  background: var(--white);
-  border-bottom: none;
-  padding-bottom: 70px;
-}
-
-.closing-text {
-  font-size: 15px;
-  font-weight: 300;
-  color: var(--text);
-  line-height: 2.2;
-}
-
-.closing-text strong {
-  color: var(--deep-rose);
-  font-weight: 600;
-}
-
-.share-buttons {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 36px;
-}
-
-.share-btn {
-  flex: 1;
-  max-width: 160px;
-  padding: 13px 10px;
-  border-radius: 10px;
-  font-size: 13px;
-  letter-spacing: 1px;
-  background: var(--cream);
-  border: 1px solid rgba(196, 135, 124, 0.3);
-  color: var(--text);
-  transition: opacity 0.2s;
-}
-
-.share-btn.primary {
-  background: var(--rose);
-  border-color: var(--rose);
-  color: var(--white);
-}
-
-.share-btn:active { opacity: 0.8; }
 
 /* ===== Lightbox ===== */
 .lightbox {

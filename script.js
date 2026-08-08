@@ -190,28 +190,6 @@ function copyText(text) {
   copyToClipboard(text).then(() => showToast('복사되었습니다 ✓'));
 }
 
-function copyLink() {
-  copyToClipboard(window.location.href).then(() => showToast('링크가 복사되었습니다 ✓'));
-}
-
-async function shareInvitation() {
-  const shareData = {
-    title: '노재서 ♥ 강나경 결혼합니다',
-    text: '2026년 11월 14일 토요일 오전 11시 30분\nW스퀘어컨벤션 로비층 그레이스홀',
-    url: window.location.href,
-  };
-
-  if (navigator.share) {
-    try {
-      await navigator.share(shareData);
-    } catch (err) {
-      // User cancelled the share sheet — nothing to do
-    }
-    return;
-  }
-  copyLink();
-}
-
 const toast = document.getElementById('copy-toast');
 let toastTimer;
 
