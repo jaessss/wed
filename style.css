@@ -699,6 +699,50 @@ button {
   gap: 14px;
 }
 
+.account-accordion {
+  background: var(--white);
+  border: 1px solid rgba(196, 135, 124, 0.2);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.account-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: var(--dark);
+  padding: 18px 20px;
+  cursor: pointer;
+}
+
+.account-chevron {
+  color: var(--gold);
+  transition: transform 0.25s ease;
+}
+
+.account-toggle[aria-expanded="true"] .account-chevron {
+  transform: rotate(180deg);
+}
+
+.account-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.account-panel-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 14px 14px;
+}
+
 .account-item {
   background: var(--white);
   border: 1px solid rgba(196, 135, 124, 0.2);

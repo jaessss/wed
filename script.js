@@ -143,6 +143,20 @@ lightbox.addEventListener('touchend', e => {
   if (Math.abs(dx) > 50) changeLightbox(dx < 0 ? 1 : -1);
 });
 
+// ===== Account Accordion =====
+function toggleAccount(button) {
+  const panel = button.nextElementSibling;
+  const isOpen = button.getAttribute('aria-expanded') === 'true';
+
+  if (isOpen) {
+    button.setAttribute('aria-expanded', 'false');
+    panel.style.maxHeight = null;
+  } else {
+    button.setAttribute('aria-expanded', 'true');
+    panel.style.maxHeight = panel.scrollHeight + 'px';
+  }
+}
+
 // ===== Copy & Share =====
 function copyToClipboard(text) {
   if (navigator.clipboard) {
