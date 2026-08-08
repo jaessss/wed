@@ -15,6 +15,24 @@ setTimeout(() => {
   document.body.classList.remove('intro-locked');
 }, 4000);
 
+// ===== Background Music =====
+const bgm = document.getElementById('bgm');
+const bgmToggle = document.getElementById('bgm-toggle');
+
+function setBgmIcon(playing) {
+  bgmToggle.textContent = playing ? '🔊' : '🔇';
+  bgmToggle.setAttribute('aria-label', playing ? '배경음악 정지' : '배경음악 재생');
+}
+
+bgmToggle.addEventListener('click', () => {
+  if (bgm.paused) {
+    bgm.play().then(() => setBgmIcon(true)).catch(() => setBgmIcon(false));
+  } else {
+    bgm.pause();
+    setBgmIcon(false);
+  }
+});
+
 // ===== Cover Script Text: letter-by-letter reveal =====
 const scriptBaseDelay = 3.6; // seconds — matches when .cover-inner finishes fading in
 const scriptStep = 0.06;
