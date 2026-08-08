@@ -61,7 +61,7 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach(sec => observer.observe(sec));
 
-// ===== Gallery Carousel =====
+// ===== Gallery =====
 const photos = [
   'images/gallery/01.jpg',
   'images/gallery/02.jpg',
@@ -84,32 +84,6 @@ const photos = [
   'images/gallery/19.jpg',
   'images/gallery/20.jpg',
 ];
-
-const track = document.getElementById('carousel-track');
-const dotsWrap = document.getElementById('carousel-dots');
-
-photos.forEach((_, i) => {
-  const dot = document.createElement('button');
-  dot.className = 'dot' + (i === 0 ? ' active' : '');
-  dot.setAttribute('aria-label', `${i + 1}번 사진으로 이동`);
-  dot.addEventListener('click', () => {
-    track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
-  });
-  dotsWrap.appendChild(dot);
-});
-
-const dots = dotsWrap.querySelectorAll('.dot');
-
-let scrollTick = false;
-track.addEventListener('scroll', () => {
-  if (scrollTick) return;
-  scrollTick = true;
-  requestAnimationFrame(() => {
-    const index = Math.round(track.scrollLeft / track.clientWidth);
-    dots.forEach((d, i) => d.classList.toggle('active', i === index));
-    scrollTick = false;
-  });
-});
 
 // ===== Lightbox =====
 let currentIndex = 0;
