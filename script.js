@@ -130,11 +130,9 @@ function toggleGalleryMore() {
 let currentIndex = 0;
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
-const lightboxCounter = document.getElementById('lightbox-counter');
 
 function renderLightbox() {
   lightboxImg.src = photos[currentIndex];
-  lightboxCounter.textContent = `${currentIndex + 1} / ${photos.length}`;
 }
 
 function openLightbox(index) {
