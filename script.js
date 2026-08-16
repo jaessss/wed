@@ -133,12 +133,24 @@ const lightboxImg = document.getElementById('lightbox-img');
 
 function renderLightbox() {
   lightboxImg.src = photos[currentIndex];
+  lightboxImg.alt = `웨딩 사진 ${currentIndex + 1}`;
 }
 
 function openLightbox(index) {
   currentIndex = index;
   renderLightbox();
+  lightbox.classList.remove('single');
   lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+// Show one standalone image (e.g. the shuttle stop photo). The `single`
+// class hides the prev/next arrows and disables navigation, since there
+// is nothing to page through.
+function openPhoto(src, alt) {
+  lightboxImg.src = src;
+  lightboxImg.alt = alt || '';
+  lightbox.classList.add('open', 'single');
   document.body.style.overflow = 'hidden';
 }
 
@@ -148,6 +160,7 @@ function closeLightbox() {
 }
 
 function changeLightbox(dir) {
+  if (lightbox.classList.contains('single')) return;
   currentIndex = (currentIndex + dir + photos.length) % photos.length;
   renderLightbox();
 }

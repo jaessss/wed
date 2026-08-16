@@ -526,6 +526,20 @@ button {
   line-height: 1.5;
 }
 
+.transport-photo-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(196, 135, 124, 0.35);
+  background: var(--white);
+  color: var(--text);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s;
+}
+
+.transport-photo-btn:active { opacity: 0.8; }
+
 .map-buttons {
   display: flex;
   gap: 12px;
@@ -768,6 +782,12 @@ button {
 
 .lightbox-prev { left: 10px; }
 .lightbox-next { right: 10px; }
+
+/* Standalone image (shuttle stop photo) — nothing to page through. */
+.lightbox.single .lightbox-prev,
+.lightbox.single .lightbox-next {
+  display: none;
+}
 
 /* ===== Responsive tweaks ===== */
 @media (max-width: 360px) {
