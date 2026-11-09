@@ -540,6 +540,65 @@ button {
 
 .transport-photo-btn:active { opacity: 0.8; }
 
+.transport-sub {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--deep-rose);
+  margin: 14px 0 4px;
+}
+
+.transport-sub.first { margin-top: 6px; }
+
+.transport-body { flex: 1; min-width: 0; }
+
+.charter {
+  margin-top: 12px;
+  padding: 12px;
+  background: var(--white);
+  border-radius: 10px;
+  border: 1px solid rgba(196, 135, 124, 0.18);
+}
+
+.charter-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--deep-rose);
+  margin-bottom: 8px;
+}
+
+.charter-name span {
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+}
+
+.charter-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  row-gap: 4px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.charter-info dt {
+  color: var(--text);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.charter-info dd {
+  margin: 0;
+  color: var(--light-text);
+  word-break: keep-all;
+}
+
+.charter-info a {
+  color: var(--deep-rose);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .map-buttons {
   display: flex;
   gap: 12px;
