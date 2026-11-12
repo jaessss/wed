@@ -589,6 +589,7 @@ button {
   color: var(--deep-rose);
   text-decoration: underline;
   text-underline-offset: 2px;
+  overflow-wrap: anywhere;
 }
 
 .map-buttons {
