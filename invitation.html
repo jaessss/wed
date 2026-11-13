@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>노재서 ♥ 강나경 결혼합니다</title>
+  <meta name="description" content="2026년 11월 14일 토요일 오전 11시 30분, W스퀘어컨벤션 로비층 그레이스홀" />
+  <meta property="og:title" content="노재서 ♥ 강나경 결혼합니다" />
+  <meta property="og:description" content="2026년 11월 14일 토요일 오전 11시 30분 · W스퀘어컨벤션 로비층 그레이스홀" />
+  <meta property="og:image" content="images/gallery/12.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css?v=20261112a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <script>
+    // Measure the viewport height once, before first paint, and freeze it.
+    // Mobile browsers grow the viewport when the URL bar collapses on scroll;
+    // letting the cover follow that would re-crop the photo and look like a zoom.
+    (function () {
+      function lockViewportHeight() {
+        document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
+      }
+      lockViewportHeight();
+      // Orientation change is a real layout change, so re-measure there only.
+      window.addEventListener('orientationchange', function () {
+        setTimeout(lockViewportHeight, 150);
+      });
+    })();
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Gowun+Dodum&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!--
+    Background music: "There Is Romance" by Kevin MacLeod (incompetech.com)
+    Licensed under Creative Commons: By Attribution 4.0
+    http://creativecommons.org/licenses/by/4.0/
+  -->
+  <audio id="bgm" src="audio/bgm.m4a" loop preload="none"></audio>
+  <button id="bgm-toggle" class="bgm-toggle" type="button" aria-label="배경음악 재생">♪</button>
+
+  <!-- Intro Overlay -->
+  <div id="intro" class="intro">
+    <div class="intro-inner">
+      <div class="intro-line"></div>
+      <p class="intro-date">2026 · 11 · 14</p>
+      <h2 class="intro-names">노재서 &nbsp;&amp;&nbsp; 강나경</h2>
+      <div class="intro-line"></div>
+    </div>
+  </div>
+
+  <!-- Cover -->
+  <section class="cover">
+    <img class="cover-photo" src="images/cover.jpg" alt="노재서 강나경 웨딩 사진" />
+    <div class="cover-scrim"></div>
+    <div class="cover-inner">
+      <p class="cover-script"><span class="script-line">We're getting</span><br /><span class="script-line">married.</span></p>
+    </div>
+  </section>
+
+  <!-- Invitation Message -->
+  <section class="message section">
+    <div class="section-label">INVITATION</div>
+    <p class="message-text">
+      함께 있을 때 가장 나다운 모습이 되고,<br />
+      함께 있을 때 미래를 꿈꾸게 하는 사람을 만나<br />
+      함께 맞는 열한 번째 가을, 결혼합니다.<br /><br />
+      부부라는 이름으로 시작하는 뜻깊은 순간에<br />
+      늘 곁에서 아껴주셨던 소중한 분들을 모십니다.
+    </p>
+    <div class="family-info">
+      <div class="family-side">
+        <p class="family-name-main">신랑 <span class="name-highlight">노재서</span></p>
+        <p class="family-name">노경용 · <span class="deceased"><span class="chrysanthemum">✿</span> 최보경</span>의 아들</p>
+      </div>
+      <div class="family-divider">|</div>
+      <div class="family-side">
+        <p class="family-name-main">신부 <span class="name-highlight">강나경</span></p>
+        <p class="family-name">김성은의 딸</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Date & Calendar & Countdown -->
+  <section class="date-section section">
+    <div class="section-label">DATE</div>
+    <div class="date-display">
+      <p class="date-big">2026. 11. 14</p>
+      <p class="date-sub">토요일 오전 11시 30분</p>
+    </div>
+
+    <div class="calendar">
+      <div class="calendar-head">
+        <span class="cal-dow sun">일</span>
+        <span class="cal-dow">월</span>
+        <span class="cal-dow">화</span>
+        <span class="cal-dow">수</span>
+        <span class="cal-dow">목</span>
+        <span class="cal-dow">금</span>
+        <span class="cal-dow sat">토</span>
+      </div>
+      <div class="calendar-grid">
+        <span class="cal-day sun">1</span><span class="cal-day">2</span><span class="cal-day">3</span><span class="cal-day">4</span><span class="cal-day">5</span><span class="cal-day">6</span><span class="cal-day sat">7</span>
+        <span class="cal-day sun">8</span><span class="cal-day">9</span><span class="cal-day">10</span><span class="cal-day">11</span><span class="cal-day">12</span><span class="cal-day">13</span><span class="cal-day sat today">14</span>
+        <span class="cal-day sun">15</span><span class="cal-day">16</span><span class="cal-day">17</span><span class="cal-day">18</span><span class="cal-day">19</span><span class="cal-day">20</span><span class="cal-day sat">21</span>
+        <span class="cal-day sun">22</span><span class="cal-day">23</span><span class="cal-day">24</span><span class="cal-day">25</span><span class="cal-day">26</span><span class="cal-day">27</span><span class="cal-day sat">28</span>
+        <span class="cal-day sun">29</span><span class="cal-day">30</span>
+      </div>
+    </div>
+
+    <div class="countdown" id="countdown">
+      <div class="count-item">
+        <span class="count-num" id="days">--</span>
+        <span class="count-label">일</span>
+      </div>
+      <div class="count-item">
+        <span class="count-num" id="hours">--</span>
+        <span class="count-label">시간</span>
+      </div>
+      <div class="count-item">
+        <span class="count-num" id="minutes">--</span>
+        <span class="count-label">분</span>
+      </div>
+      <div class="count-item">
+        <span class="count-num" id="seconds">--</span>
+        <span class="count-label">초</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Venue -->
+  <section class="venue section">
+    <div class="section-label">LOCATION</div>
+    <h3 class="venue-name">W스퀘어컨벤션</h3>
+    <p class="venue-hall">로비층 그레이스홀</p>
+    <p class="venue-address">경기도 성남시 분당구 판교역로226번길 16</p>
+
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps?q=경기도+성남시+분당구+판교역로226번길+16+W스퀘어컨벤션&output=embed"
+        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="transport">
+      <div class="transport-item">
+        <div class="transport-icon">🚗</div>
+        <div>
+          <p class="transport-title">자차 / 주차</p>
+          <p class="transport-desc">
+            내비게이션 "판교W스퀘어컨벤션" 입력<br /><br />
+            경부고속도로<br />
+            : 판교IC(톨게이트) 진출 후 좌회전<br />
+            → 약 700m 직진하여 사거리에서 우회전 (SK주유소 뒷 건물)<br /><br />
+            분당·수서간 도시고속도로<br />
+            : 성남아트센터 방면 지하차도 옆길 벌말사거리에서 우회전<br />
+            → 삼성테크원 삼거리에서 판교역 방면으로 좌회전
+          </p>
+          <p class="transport-sub">주차 안내</p>
+          <p class="transport-desc">
+            웨딩홀 2시간 무료주차<br />
+            인근 주차타워(삼환하이펙스 B동) 무료주차<br />
+            (주차요원 안내 예정)
+          </p>
+        </div>
+      </div>
+      <div class="transport-item">
+        <div class="transport-icon">🚇</div>
+        <div>
+          <p class="transport-title">버스 / 지하철 / 셔틀</p>
+          <p class="transport-sub first">버스</p>
+          <p class="transport-desc">
+            [일반버스] 390번<br />
+            "동안교" 정류장 하차 후 도보 2분<br /><br />
+            [직행버스] 4000번 (수원~성남)<br />
+            "한국무역정보통신" 정류장 하차 후 도보 2분<br /><br />
+            [일반버스] 101번, 330번, 350번, 390번<br />
+            "차그룹컨소시엄" 정류장 하차 후 도보 3분
+          </p>
+          <p class="transport-sub">지하철</p>
+          <p class="transport-desc">
+            [신분당선/경강선]<br />
+            "판교역" 1번 출구로 나온 후 직진 도보 6분 거리<br />
+            (SK주유소 뒷 건물)<br /><br />
+            [야탑역 출발]<br />
+            330번 버스 탑승, "차그룹컨소시엄" 정류장 하차 후, 도보 3분
+          </p>
+          <p class="transport-sub">셔틀</p>
+          <p class="transport-desc">
+            판교역 1번 출구 앞<br />
+            약 10분 간격 수시운행
+          </p>
+          <button class="transport-photo-btn" type="button"
+                  onclick="openPhoto('images/shuttle-stop.jpg', '셔틀 탑승지')">
+            셔틀 탑승지 사진 보기
+          </button>
+        </div>
+      </div>
+      <div class="transport-item">
+        <div class="transport-icon">🚌</div>
+        <div class="transport-body">
+          <p class="transport-title">전세버스</p>
+          <p class="transport-desc">총 3대의 버스가 운행됩니다</p>
+
+          <div class="charter">
+            <p class="charter-name">[창원] - 마창고속 경남72바9999</p>
+            <ul class="charter-info">
+              <li>타는 곳 : 창원종합버스터미널 버스 출입구 맞은편 표준 4공장 입구(창원시 의창구 팔용동 524)</li>
+              <li>시각 : 5:30</li>
+              <li>기사님 : 박재철(<a href="tel:010-9360-3228">010-9360-3228</a>)</li>
+              <li>선탑자 : 노민용(<a href="tel:010-3096-3858">010-3096-3858</a>)</li>
+              <li>복귀출발시각 : 13:30</li>
+            </ul>
+          </div>
+          <div class="charter">
+            <p class="charter-name">[부산] - 마창고속 경남72바5938</p>
+            <ul class="charter-info">
+              <li>타는 곳 : 당감동정육단 (부산진구 당감서로 73)</li>
+              <li>시각 : 5:30</li>
+              <li>기사님 : 박재봉(<a href="tel:010-3840-4130">010-3840-4130</a>)</li>
+              <li>선탑자 : 최진열(<a href="tel:010-8522-3282">010-8522-3282</a>)</li>
+              <li>복귀출발시각 : 13:30</li>
+            </ul>
+          </div>
+          <div class="charter">
+            <p class="charter-name">[DSR] - 뉴신명관광 경기76아6936</p>
+            <ul class="charter-info">
+              <li>타는 곳 : DSR A타워 앞(화성시 병점구 삼성전자로 1-1)</li>
+              <li>시각 : 10:20</li>
+              <li>기사님 : 강동훈(<a href="tel:010-4631-4759">010-4631-4759</a>)</li>
+              <li>선탑자 : 이수용(<a href="tel:010-4627-1994">010-4627-1994</a>)</li>
+              <li>복귀출발시각 : 12:30</li>
+              <li>카톡방 : <a href="https://open.kakao.com/o/gFf70pVi" target="_blank" rel="noopener">https://open.kakao.com/o/gFf70pVi</a> (비번 1114)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-buttons">
+      <a class="map-btn kakao"
+         href="https://map.kakao.com/link/search/W스퀘어컨벤션 판교"
+         target="_blank" rel="noopener">카카오맵</a>
+      <a class="map-btn naver"
+         href="https://map.naver.com/v5/search/W스퀘어컨벤션 판교"
+         target="_blank" rel="noopener">네이버지도</a>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery section">
+    <div class="section-label">GALLERY</div>
+    <div class="gallery-grid" id="gallery-grid">
+      <div class="g-item" onclick="openLightbox(0)">
+        <img src="images/gallery/01.jpg" alt="웨딩 사진 1" />
+      </div>
+      <div class="g-item" onclick="openLightbox(1)">
+        <img src="images/gallery/02.jpg" alt="웨딩 사진 2" loading="lazy" />
+      </div>
+      <div class="g-item" onclick="openLightbox(2)">
+        <img src="images/gallery/03.jpg" alt="웨딩 사진 3" loading="lazy" />
+      </div>
+      <div class="g-item" onclick="openLightbox(3)">
+        <img src="images/gallery/04.jpg" alt="웨딩 사진 4" loading="lazy" />
+      </div>
+      <div class="g-item" onclick="openLightbox(4)">
+        <img src="images/gallery/05.jpg" alt="웨딩 사진 5" loading="lazy" />
+      </div>
+      <div class="g-item" onclick="openLightbox(5)">
+        <img src="images/gallery/06.jpg" alt="웨딩 사진 6" loading="lazy" />
+      </div>
+      <div class="g-item" onclick="openLightbox(6)">
+        <img src="images/gallery/07.jpg" alt="웨딩 사진 7" loading="lazy" />
+      </div>
+      <div class="g-item" onclick="openLightbox(7)">
+        <img src="images/gallery/08.jpg" alt="웨딩 사진 8" loading="lazy" />
+      </div>
+      <div class="g-item" onclick="openLightbox(8)">
+        <img src="images/gallery/09.jpg" alt="웨딩 사진 9" loading="lazy" />
+      </div>
+      <div class="g-item more-hidden" onclick="openLightbox(9)">
+        <img src="images/gallery/10.jpg" alt="웨딩 사진 10" loading="lazy" />
+      </div>
+      <div class="g-item more-hidden" onclick="openLightbox(10)">
+        <img src="images/gallery/11.jpg" alt="웨딩 사진 11" loading="lazy" />
+      </div>
+      <div class="g-item more-hidden" onclick="openLightbox(11)">
+        <img src="images/gallery/12.jpg" alt="웨딩 사진 12" loading="lazy" />
+      </div>
+      <div class="g-item more-hidden" onclick="openLightbox(12)">
+        <img src="images/gallery/13.jpg" alt="웨딩 사진 13" loading="lazy" />
+      </div>
+      <div class="g-item more-hidden" onclick="openLightbox(13)">
+        <img src="images/gallery/14.jpg" alt="웨딩 사진 14" loading="lazy" />
+      </div>
+      <div class="g-item more-hidden" onclick="openLightbox(14)">
+        <img src="images/gallery/15.jpg" alt="웨딩 사진 15" loading="lazy" />
+      </div>
+      <div class="g-item more-hidden" onclick="openLightbox(15)">
+        <img src="images/gallery/16.jpg" alt="웨딩 사진 16" loading="lazy" />
+      </div>
+      <div class="g-item more-hidden" onclick="openLightbox(16)">
+        <img src="images/gallery/17.jpg" alt="웨딩 사진 17" loading="lazy" />
+      </div>
+      <div class="g-item more-hidden" onclick="openLightbox(17)">
+        <img src="images/gallery/18.jpg" alt="웨딩 사진 18" loading="lazy" />
+      </div>
+      <div class="g-item more-hidden" onclick="openLightbox(18)">
+        <img src="images/gallery/19.jpg" alt="웨딩 사진 19" loading="lazy" />
+      </div>
+      <div class="g-item more-hidden" onclick="openLightbox(19)">
+        <img src="images/gallery/20.jpg" alt="웨딩 사진 20" loading="lazy" />
+      </div>
+      <div class="g-item more-hidden" onclick="openLightbox(20)">
+        <img src="images/gallery/21.jpg" alt="웨딩 사진 21" loading="lazy" />
+      </div>
+    </div>
+    <button class="gallery-more-btn" id="gallery-more-btn" type="button" onclick="toggleGalleryMore()">사진 더보기 (12)</button>
+  </section>
+
+  <!-- Account -->
+  <section class="account section">
+    <h3 class="account-heading">마음 전하실 곳</h3>
+    <p class="account-desc">
+      멀리서도 축하의 마음을<br />
+      전하고 싶으신 분들을 위해<br />
+      계좌번호를 안내드립니다.<br /><br />
+      소중한 축하를 보내주셔서 감사드리며,<br />
+      따뜻한 마음에 깊이 감사드립니다.
+    </p>
+    <div class="account-group">
+      <div class="account-accordion">
+        <button class="account-toggle" type="button" onclick="toggleAccount(this)" aria-expanded="false">
+          <span>신랑측</span>
+          <span class="account-chevron"></span>
+        </button>
+        <div class="account-panel">
+          <div class="account-panel-inner">
+            <div class="account-item" onclick="copyText('새마을금고 9003247739054')">
+              <p class="account-role">신랑 노재서</p>
+              <p class="account-bank">새마을금고</p>
+              <p class="account-num">9003247739054</p>
+              <p class="account-holder">노재서</p>
+              <span class="copy-badge">복사</span>
+            </div>
+            <div class="account-item" onclick="copyText('경남은행 592210277285')">
+              <p class="account-role">신랑 아버지 노경용</p>
+              <p class="account-bank">경남은행</p>
+              <p class="account-num">592210277285</p>
+              <p class="account-holder">노경용</p>
+              <span class="copy-badge">복사</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="account-accordion">
+        <button class="account-toggle" type="button" onclick="toggleAccount(this)" aria-expanded="false">
+          <span>신부측</span>
+          <span class="account-chevron"></span>
+        </button>
+        <div class="account-panel">
+          <div class="account-panel-inner">
+            <div class="account-item" onclick="copyText('신한은행 110505043226')">
+              <p class="account-role">신부 강나경</p>
+              <p class="account-bank">신한은행</p>
+              <p class="account-num">110505043226</p>
+              <p class="account-holder">강나경</p>
+              <span class="copy-badge">복사</span>
+            </div>
+            <div class="account-item" onclick="copyText('국민은행 357240036592')">
+              <p class="account-role">신부 어머니 김성은</p>
+              <p class="account-bank">국민은행</p>
+              <p class="account-num">357240036592</p>
+              <p class="account-holder">김성은</p>
+              <span class="copy-badge">복사</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="copy-toast" class="copy-toast">복사되었습니다 ✓</div>
+
+  <!-- Image Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-inner" onclick="event.stopPropagation()">
+      <img id="lightbox-img" src="" alt="" />
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <button class="lightbox-prev" onclick="changeLightbox(-1)">‹</button>
+      <button class="lightbox-next" onclick="changeLightbox(1)">›</button>
+    </div>
+  </div>
+
+  <script src="script.js?v=20261112a"></script>
+</body>
+</html>
